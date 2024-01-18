@@ -1,0 +1,771 @@
+$color_1: #219ebc;
+$color_2: white;
+$color_3: #fb8500;
+$color_4: rgb(145, 47, 47);
+$color_5: black;
+$color_6: #ffb703;
+$font-family_1: 'Edu TAS Beginner', cursive;
+$font-family_2: Georgia, 'Times New Roman', Times, serif, 'Arial Narrow', Arial, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$font-family_3: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$background-color_1: #023047;
+$background-color_2: #ffb703;
+$background-color_3: white;
+
+
+@keyframes desvanecer {
+    to {
+        opacity: 1;
+    }
+
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes cambioGradiente {
+    to {
+        background: #2980B9;
+        background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);
+        background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);
+    }
+
+    from {
+        background: #1c92d2;
+        background: -webkit-linear-gradient(to bottom, #f2fcfe, #1c92d2);
+        background: linear-gradient(to bottom, #f2fcfe, #1c92d2);
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family_1;
+    font-size: large;
+    background-color: $background-color_1;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: $color_1;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+p {
+    color: $color_2;
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $background-color_1;
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+    .logoHeader {
+        img {
+            width: 100px;
+            height: 50px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    }
+
+    nav {
+        ul {
+            display: flex;
+            font-weight: 700;
+
+            li {
+                margin: 30px;
+                margin-bottom: 0;
+
+                a {
+                    color: $color_2;
+                }
+
+
+                &:hover {
+                    background-color: $background-color_2;
+                    size: 20px;
+                    box-shadow: 2px 2px 2px white;
+                }
+            }
+        }
+    }
+}
+
+/* footer */
+
+
+#piePagina {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+footer {
+    ul {
+        li {
+            display: inline;
+            margin: 10px;
+        }
+    }
+
+    h3 {
+        padding-bottom: 10px;
+    }
+}
+
+.redes {
+    color: $color_2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    h3 {
+        padding-left: 8px;
+    }
+
+    img {
+        width: 30px;
+    }
+}
+
+.infoContacto {
+    @extend .redes
+}
+
+.tratamientoDatos {
+    color: $color_2;
+    padding-top: 20px;
+}
+
+.wpp {
+    width: 100px;
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+}
+
+/* main index */
+
+.portadaPrincipal {
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        padding-top: 100px;
+    }
+}
+
+.caja1 {
+    font-weight: 500;
+    margin: 40px;
+    text-align: center;
+}
+
+.caja2 {
+    margin: 20px;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    font-size: x-large;
+}
+
+
+.boxServicios {
+    h2 {
+        color: $color_1;
+        font-weight: bold;
+        font-size: xx-large;
+        animation: desvanecer 2s infinite;
+    }
+
+    @extend .caja1
+}
+
+div.principalServicios {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cardServiciosNova {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    a {
+        color: $color_3;
+        font-size: x-large;
+        font-weight: 600px;
+        font-style: oblique;
+        text-align: center;
+        transition: font-size 2s;
+
+        &:hover {
+            color: $color_4;
+            font-size: xx-large;
+        }
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        border-radius: 6px;
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+        transition: transform 5s, width 2s;
+
+        &:hover {
+            width: 350px;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.videosTutoriales {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.video {
+    iframe {
+        width: 500px;
+        height: 300px;
+        margin: 50px;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+
+    h2 {
+        color: $color_1;
+        text-align: center;
+        margin: 50px;
+        margin-bottom: 0;
+        font-weight: 400px;
+        font-style: italic;
+    }
+}
+
+/* main page quienes somos */
+
+.portadaQuienesSomos {
+    height: 90vh;
+    text-align: center;
+    padding-top: 8%;
+    margin: 50px;
+
+    h1 {
+        margin-bottom: 50px;
+    }
+
+    p {
+        padding-top: 20px;
+        font-size: larger;
+        transform: translateY(20px);
+    }
+}
+
+.misionVisionPoliticas {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        text-align: center;
+        font-size: xx-large;
+        color: $color_1;
+    }
+
+    p {
+        text-align: center;
+        margin: 50px;
+        font-size: larger;
+    }
+}
+
+/* main page telas */
+
+@mixin tamañoImagen($height) {
+    height: $height;
+    width: 250px;
+}
+
+@mixin flex($direccion: column) {
+    display: flex;
+    flex-direction: $direccion;
+}
+
+.tituloTelas {
+    margin-top: 130px;
+    text-align: center;
+}
+
+#secImg {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    min-height: 100vh;
+    padding: 30px;
+
+    img {
+        height: 250px;
+        width: 250px;
+        border: solid 3px darkgrey;
+        border-radius: 20px;
+
+        &:hover {
+            box-shadow: 5px 5px 10px white;
+        }
+    }
+}
+
+.cardTelas {
+    text-align: center;
+    padding: 30px;
+    border: solid black 5px;
+    padding-bottom: 20px;
+    animation-name: cambioGradiente;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 6s;
+    animation-delay: 1s;
+
+    h2 {
+        color: $color_3;
+        font-weight: 600;
+        font-size: larger;
+        font-style: italic;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+/* main page dotacion */
+
+.tituloDotacion {
+
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    @extend .tituloTelas
+}
+
+.cardDotacion {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        @include tamañoImagen(200px);
+        border: solid 3px lightblue;
+        border-radius: 20px;
+    }
+}
+
+.productosDotacion {
+    @include flex(row);
+    justify-content: flex-start;
+    align-items: center;
+    width: 60vw;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: $background-color_3;
+    border: solid 3px black;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    transition: height 3s;
+
+    &:hover {
+        height: 250px;
+    }
+
+    p {
+        color: $color_5;
+        font-family: $font-family_2;
+        font-style: oblique;
+        padding-bottom: 10px;
+    }
+
+    h2 {
+        color: $color_5;
+        font-weight: 800 bold;
+        padding-bottom: 20px;
+        font-size: large;
+        text-align: center;
+    }
+}
+
+.descripcionProducto {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+/* main page seguridad */
+
+.tituloSeguridad {
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    @extend .tituloTelas
+}
+
+.imagenesSeguridad {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    img {
+        height: 400px;
+        width: 400px;
+        border: solid 3px lightgrey;
+        border-radius: 30px;
+    }
+
+}
+
+.cardProductosSec {
+    margin: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 30px;
+        color: $color_6;
+        font-weight: 600;
+        font-style: italic;
+    }
+}
+
+/* main page contactanos */
+
+.formulario {
+    height: 80vh;
+}
+
+.tituloContactanos {
+    margin-top: 110px;
+    text-align: center;
+}
+
+.datos {
+    margin: 30px;
+    font-family: $font-family_3;
+}
+
+fieldset {
+    font-size: large;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+form {
+    fieldset {
+        div {
+            label {
+                color: $color_2;
+            }
+        }
+
+        legend {
+            color: $color_2;
+        }
+    }
+}
+
+label {
+    padding-right: 20px;
+}
+
+.nombre {
+    label {
+        padding-right: 110px;
+    }
+}
+
+.telefono {
+    label {
+        padding-right: 110px;
+    }
+}
+
+input {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.mensaje {
+    display: flex;
+    margin-bottom: 20px;
+
+    label {
+        padding-right: 120px;
+    }
+}
+
+/* TABLET: < 1024PX */
+
+@media screen and (max-width: 1024px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+
+        nav {
+            ul {
+                li {
+                    margin: 0;
+                    padding-top: 20px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    font-size: medium;
+                }
+            }
+        }
+    }
+
+    .portadaQuienesSomos {
+        h1 {
+            margin-top: 90px;
+        }
+    }
+
+    .tituloDotacion {
+        margin-top: 170px;
+    }
+
+    .tituloSeguridad {
+        margin-top: 170px;
+    }
+
+    .tituloContactanos {
+        margin-top: 150px;
+    }
+}
+
+/* MOBILE: < 576PX */
+
+@media screen and (max-width: 576px) {
+    body {
+        font-size: medium;
+    }
+
+    header {
+        nav {
+            ul {
+                li {
+                    padding-left: 6px;
+                    padding-right: 6px;
+                    font-size: small;
+                }
+            }
+        }
+
+        .logoHeader {
+            img {
+                width: 100px;
+                height: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .portadaPrincipal {
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            padding-top: 200px;
+        }
+    }
+
+    .cardServiciosNova {
+        img {
+            width: 90vw;
+            height: auto;
+            border-radius: 6px;
+            margin-top: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+        }
+    }
+
+    .video {
+        h2 {
+            margin: 0;
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+
+        iframe {
+            width: 90vw;
+            height: 350px;
+            margin: 0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+    }
+
+    #piePagina {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    footer {
+        padding-bottom: 20px;
+    }
+
+    .tituloTelas {
+        margin-top: 200px;
+        text-align: center;
+    }
+
+    #secImg {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        img {
+            height: 250px;
+            width: 70vw;
+            border: solid 3px darkgrey;
+            border-radius: 20px;
+
+            &:hover {
+                box-shadow: 5px 5px 10px white;
+            }
+        }
+    }
+
+    .tratamientoDatos {
+        padding-left: 60px;
+    }
+
+    .redes {
+        padding-top: 30px;
+
+        img {
+            width: 50px;
+        }
+    }
+
+    .portadaQuienesSomos {
+        height: 100vh;
+        text-align: center;
+        padding-top: 12%;
+        padding-bottom: 8%;
+        margin: 50px;
+
+        h1 {
+            margin-top: 100px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .misionVisionPoliticas {
+        h2 {
+            padding-top: 10px;
+        }
+
+        p {
+            text-align: center;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            font-size: larger;
+        }
+    }
+
+    .tituloSeguridad {
+        margin-top: 200px;
+    }
+
+    fieldset {
+        font-size: small;
+    }
+
+    .nombre {
+        label {
+            padding-right: 85px;
+        }
+    }
+
+    .telefono {
+        label {
+            padding-right: 85px;
+        }
+    }
+
+    .mensaje {
+        label {
+            padding-right: 50px;
+        }
+    }
+
+    .tituloContactanos {
+        margin-top: 200px;
+    }
+
+    .tituloDotacion {
+        margin-top: 200px;
+        text-align: center;
+    }
+
+    .descripcionProducto {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .productosDotacion {
+        width: 80vw;
+
+        h2 {
+            font-size: medium;
+        }
+
+        p {
+            font-size: medium;
+        }
+    }
+}

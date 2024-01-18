@@ -1,0 +1,711 @@
+@keyframes desvanecer {
+  to {
+    opacity: 1;
+  }
+
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes cambioGradiente {
+  to {
+    background: #2980B9;
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);
+    background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);
+  }
+
+  from {
+    background: #1c92d2;
+    background: -webkit-linear-gradient(to bottom, #f2fcfe, #1c92d2);
+    background: linear-gradient(to bottom, #f2fcfe, #1c92d2);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Edu TAS Beginner", cursive;
+  font-size: large;
+  background-color: #023047;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #219ebc;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+p {
+  color: white;
+}
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #023047;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+header .logoHeader img {
+  width: 100px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+header nav ul {
+  display: flex;
+  font-weight: 700;
+}
+
+header nav ul li {
+  margin: 30px;
+  margin-bottom: 0;
+}
+
+header nav ul li a {
+  color: white;
+}
+
+header nav ul li:hover {
+  background-color: #ffb703;
+  size: 20px;
+  box-shadow: 2px 2px 2px white;
+}
+
+/* footer */
+
+#piePagina {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+footer ul li {
+  display: inline;
+  margin: 10px;
+}
+
+footer h3 {
+  padding-bottom: 10px;
+}
+
+.redes,
+.infoContacto {
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.redes h3,
+.infoContacto h3 {
+  padding-left: 8px;
+}
+
+.redes img,
+.infoContacto img {
+  width: 30px;
+}
+
+.tratamientoDatos {
+  color: white;
+  padding-top: 20px;
+}
+
+.wpp {
+  width: 100px;
+  position: fixed;
+  bottom: 80px;
+  right: 50px;
+}
+
+/* main index */
+
+.portadaPrincipal img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  padding-top: 100px;
+}
+
+.caja1,
+.boxServicios {
+  font-weight: 500;
+  margin: 40px;
+  text-align: center;
+}
+
+.caja2 {
+  margin: 20px;
+  text-align: center;
+  font-weight: 300;
+  font-style: italic;
+  font-size: x-large;
+}
+
+.boxServicios h2 {
+  color: #219ebc;
+  font-weight: bold;
+  font-size: xx-large;
+  animation: desvanecer 2s infinite;
+}
+
+div.principalServicios {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cardServiciosNova {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cardServiciosNova a {
+  color: #fb8500;
+  font-size: x-large;
+  font-weight: 600px;
+  font-style: oblique;
+  text-align: center;
+  transition: font-size 2s;
+}
+
+.cardServiciosNova a:hover {
+  color: rgb(145, 47, 47);
+  font-size: xx-large;
+}
+
+.cardServiciosNova img {
+  width: 300px;
+  height: 300px;
+  border-radius: 6px;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  transition: transform 5s, width 2s;
+}
+
+.cardServiciosNova img:hover {
+  width: 350px;
+  transform: rotate(90deg);
+}
+
+.videosTutoriales {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.video iframe {
+  width: 500px;
+  height: 300px;
+  margin: 50px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.video h2 {
+  color: #219ebc;
+  text-align: center;
+  margin: 50px;
+  margin-bottom: 0;
+  font-weight: 400px;
+  font-style: italic;
+}
+
+/* main page quienes somos */
+
+.portadaQuienesSomos {
+  height: 90vh;
+  text-align: center;
+  padding-top: 8%;
+  margin: 50px;
+}
+
+.portadaQuienesSomos h1 {
+  margin-bottom: 50px;
+}
+
+.portadaQuienesSomos p {
+  padding-top: 20px;
+  font-size: larger;
+  transform: translateY(20px);
+}
+
+.misionVisionPoliticas {
+  display: flex;
+  flex-direction: column;
+}
+
+.misionVisionPoliticas h2 {
+  text-align: center;
+  font-size: xx-large;
+  color: #219ebc;
+}
+
+.misionVisionPoliticas p {
+  text-align: center;
+  margin: 50px;
+  font-size: larger;
+}
+
+/* main page telas */
+
+.tituloTelas,
+.tituloSeguridad,
+.tituloDotacion {
+  margin-top: 130px;
+  text-align: center;
+}
+
+#secImg {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+#secImg img {
+  height: 250px;
+  width: 250px;
+  border: solid 3px darkgrey;
+  border-radius: 20px;
+}
+
+#secImg img:hover {
+  box-shadow: 5px 5px 10px white;
+}
+
+.cardTelas {
+  text-align: center;
+  padding: 30px;
+  border: solid black 5px;
+  padding-bottom: 20px;
+  animation-name: cambioGradiente;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+
+.cardTelas h2 {
+  color: #fb8500;
+  font-weight: 600;
+  font-size: larger;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* main page dotacion */
+
+.tituloDotacion h1 {
+  margin-bottom: 30px;
+}
+
+.cardDotacion {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardDotacion img {
+  height: 200px;
+  width: 250px;
+  border: solid 3px lightblue;
+  border-radius: 20px;
+}
+
+.productosDotacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 60vw;
+  height: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: white;
+  border: solid 3px black;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  transition: height 3s;
+}
+
+.productosDotacion:hover {
+  height: 250px;
+}
+
+.productosDotacion p {
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif, "Arial Narrow", Arial, sans-serif, "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: oblique;
+  padding-bottom: 10px;
+}
+
+.productosDotacion h2 {
+  color: black;
+  font-weight: 800 bold;
+  padding-bottom: 20px;
+  font-size: large;
+  text-align: center;
+}
+
+.descripcionProducto {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+/* main page seguridad */
+
+.tituloSeguridad h1 {
+  margin-bottom: 30px;
+}
+
+.imagenesSeguridad {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.imagenesSeguridad img {
+  height: 400px;
+  width: 400px;
+  border: solid 3px lightgrey;
+  border-radius: 30px;
+}
+
+.cardProductosSec {
+  margin: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.cardProductosSec h2 {
+  margin-bottom: 30px;
+  color: #ffb703;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* main page contactanos */
+
+.formulario {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tituloContactanos {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.datos {
+  margin: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+fieldset {
+  font-size: large;
+  padding: 20px;
+}
+
+form fieldset div label {
+  color: white;
+}
+
+form fieldset legend {
+  color: white;
+}
+
+label {
+  padding-right: 20px;
+}
+
+.nombre label {
+  padding-right: 110px;
+}
+
+.telefono label {
+  padding-right: 110px;
+}
+
+input {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.mensaje {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.mensaje label {
+  padding-right: 120px;
+}
+
+/* TABLET: < 1024PX */
+
+@media screen and (max-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  header nav ul li {
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: medium;
+  }
+
+  .portadaQuienesSomos {
+    height: 100vh;
+  }
+
+  .portadaQuienesSomos h1 {
+    margin-top: 90px;
+  }
+
+  .portadaQuienesSomos p {
+    padding-bottom: 40px;
+  }
+
+  .misionVisionPoliticas {
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
+  .tituloDotacion {
+    margin-top: 170px;
+  }
+
+  .tituloSeguridad {
+    margin-top: 170px;
+  }
+
+  .tituloContactanos {
+    margin-top: 150px;
+  }
+}
+
+
+/* MOBILE: < 630PX */
+
+@media screen and (max-width: 630px) {
+  body {
+    font-size: medium;
+  }
+
+  header nav ul li {
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: small;
+  }
+
+  header .logoHeader img {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .portadaPrincipal img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding-top: 200px;
+  }
+
+  .cardServiciosNova img {
+    width: 90vw;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+
+  .video h2 {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+
+  .video iframe {
+    width: 90vw;
+    height: 350px;
+    margin: 0;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  #piePagina {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  footer {
+    padding-bottom: 20px;
+  }
+
+  .tituloTelas,
+  .tituloDotacion,
+  .tituloSeguridad {
+    margin-top: 200px;
+    text-align: center;
+  }
+
+  #secImg {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #secImg img {
+    height: 200px;
+    width: 50vw;
+  }
+
+  #secImg img:hover {
+    box-shadow: 5px 5px 10px white;
+  }
+
+  .tratamientoDatos {
+    padding-left: 60px;
+  }
+
+  .redes,
+  .infoContacto {
+    padding-top: 30px;
+  }
+
+  .redes img,
+  .infoContacto img {
+    width: 50px;
+  }
+
+  .portadaQuienesSomos {
+    height: 100vh;
+    text-align: center;
+    padding-top: 12%;
+    padding-bottom: 8%;
+    margin: 50px;
+  }
+
+  .portadaQuienesSomos h1 {
+    margin-top: 100px;
+    margin-bottom: 30px;
+  }
+
+  .misionVisionPoliticas {
+    display: flex;
+    flex-direction: column;
+    margin-top: 300px;
+    padding-top: 250px;
+  }
+
+  .misionVisionPoliticas h2 {
+    padding-top: 10px;
+  }
+
+  .misionVisionPoliticas p {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: larger;
+  }
+
+  .tituloSeguridad {
+    margin-top: 200px;
+  }
+
+  .imagenesSeguridad img {
+    height: 280px;
+    width: 280px;
+  }
+
+  fieldset {
+    font-size: small;
+  }
+
+  .nombre label {
+    padding-right: 85px;
+  }
+
+  .telefono label {
+    padding-right: 85px;
+  }
+
+  .mensaje label {
+    padding-right: 50px;
+  }
+
+  .tituloContactanos {
+    margin-top: 200px;
+  }
+
+  .tituloDotacion {
+    margin-top: 200px;
+    text-align: center;
+  }
+
+  .descripcionProducto {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .productosDotacion {
+    width: 80vw;
+  }
+
+  .productosDotacion h2 {
+    font-size: medium;
+  }
+
+  .productosDotacion p {
+    font-size: medium;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
