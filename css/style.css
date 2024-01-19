@@ -526,10 +526,14 @@ input {
     font-size: medium;
   }
 
+  header nav ul {
+    font-size: 13px;
+  }
+
   header nav ul li {
-    padding-left: 6px;
-    padding-right: 6px;
-    font-size: small;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: smaller;
   }
 
   header .logoHeader img {
@@ -560,13 +564,13 @@ input {
   .video h2 {
     margin: 0;
     padding-top: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
+    font-size: large;
   }
 
   .video iframe {
-    width: 90vw;
+    width: 80vw;
     height: 350px;
-    margin: 0;
     padding-bottom: 20px;
     margin-bottom: 30px;
   }
@@ -690,9 +694,21 @@ input {
     text-align: center;
   }
 
+  .productosDotacion {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
   .descripcionProducto {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .cardDotacion img {
+    height: 150px;
+    width: 130px;
+    border: solid 3px lightblue;
+    border-radius: 20px;
   }
 
   .productosDotacion {
@@ -700,11 +716,11 @@ input {
   }
 
   .productosDotacion h2 {
-    font-size: medium;
+    font-size: small;
   }
 
   .productosDotacion p {
-    font-size: medium;
+    font-size: small;
   }
 }
 
